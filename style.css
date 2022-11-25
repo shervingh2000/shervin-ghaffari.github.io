@@ -239,6 +239,7 @@ div.percentage::before{
         width: 70%;
         height: auto;
         max-width: 420px;
+        padding-top: 20px;
         z-index: 2;
     }
 
