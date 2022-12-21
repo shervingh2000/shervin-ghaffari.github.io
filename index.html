@@ -225,9 +225,9 @@
                     <div class="MoreDetails">
                         <textarea name="text"  cols="30" rows="4" placeholder="MoreDetails"></textarea>
                     </div><br>
-                    <!-- <div style="display: flex;justify-content: center; margin-bottom: 50px;margin-top: 30px;">
+                    <div style="display: flex;justify-content: center; margin-bottom: 50px;margin-top: 30px;">
                         <button type="button" onclick="send()" style="width: 100%; height: 30px;">SEND</button>
-                    </div> -->
+                    </div>
                     
                 
                 </form>
@@ -241,7 +241,7 @@
 
     <script>
         Telegram.WebApp.ready();
-        Telegram.WebApp.MainButton.setText('Choose Color').show().onClick(send());
+        // Telegram.WebApp.MainButton.setText('Choose Color').show().onClick(send());
          
          function send(){
              Telegram.WebApp.sendData(['ghg','hggh','rertr','kljlj']);
