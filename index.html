@@ -236,20 +236,20 @@
             </div>
 
         </div>
-
-        <script>
-           Telegram.WebApp.ready();
-           Telegram.WebApp.MainButton.setText('Choose Color').show().onClick(send());
-            
-            function send(){
-                Telegram.WebApp.sendData(['ghg','hggh','rertr','kljlj']);
-                Telegram.WebApp.sendData(data);
-                Telegram.WebApp.close();
-            }
-            
-        </script>
     
     </body>
+
+    <script>
+        Telegram.WebApp.ready();
+        Telegram.WebApp.MainButton.setText('Choose Color').show().onClick(send());
+         
+         function send(){
+             Telegram.WebApp.sendData(['ghg','hggh','rertr','kljlj']);
+             Telegram.WebApp.sendData(data);
+             Telegram.WebApp.close();
+         }
+         
+     </script>
     
 
 </html>
