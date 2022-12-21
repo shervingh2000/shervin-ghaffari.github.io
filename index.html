@@ -65,8 +65,12 @@
                     margin: 0px 0px;
                 }
                 .header{
-                display: block;
-                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-left: 20px;
+                color: rgb(2, 85, 57);
+                
             }
             .FoodForm {
                     text-align: center;
@@ -79,7 +83,10 @@
             .header_details{
                 margin: 0px 5%;
                 display: flex;
-                text-align: center;
+                /* text-align: center; */
+                padding: 0px 10px;
+                font-family: sans-serif;
+                color: rgb(31, 148, 172);
                 justify-content: center;
             }
             .FoodSection{
@@ -115,7 +122,7 @@
                 </header>
 
                 <div class = "header_details">
-                    <p class = "details">Enter your order in the form below and we will prepare it as quickly as possible. <br>
+                    <p class = "details">Enter your order in the form below and we will prepare it as quickly as possible.
                         For more information on the ingredients that we use.</p>
                 </div>
 
