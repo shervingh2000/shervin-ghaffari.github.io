@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>SellerPage</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+        <style>
+            .main_body{
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                background-color: blanchedalmond;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .header{
+                display: flex;
+                align-items: center;
+            }
+            ::placeholder{
+                color: aliceblue;
+            }
+            input{
+                border-radius: 7px;
+                margin: 5px 0px;
+                padding: 2px;
+                height: 20px;
+                background-color: rgb(58, 63, 62);;
+                color: aliceblue;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
+            }
+            .header h1{
+                margin-right: 30px;
+            }
+            .FoodSection{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .header img{
+                margin-right: 30px;
+            }
+            #form .FoodSection{
+                text-align: left;
+            }
+            textarea{
+                border-radius: 7px;
+                background-color: rgb(58, 63, 62);
+                color:aliceblue;
+                padding: 7px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            
+            @media screen and (max-width: 754px ){
+                .main_body{
+                    margin: 0px 0px;
+                }
+                .header{
+                display: block;
+                text-align: center;
+            }
+            .FoodForm {
+                    text-align: center;
+                }
+            #FoodFormSec{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .header_details{
+                margin: 0px 5%;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+            }
+            .FoodSection{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            .YourSection{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            .YourDetailSec{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+        }
+                
+        </style>
+
+    </head>
+
+
+    <body style="margin: 0;padding: 0; box-sizing: border-box;">
+        <div class="main_body">
+
+            <div class = "container">
+                <header class="header">
+                    <h1>Food Order Form</h1>
+                    <img class = "header_img" src="https://s3-us-west-2.amazonaws.com/userdata123/www/htmlblocks-images/28/28433/28433_4623678_630e0c5dd8f87.png" alt="Food Order Form">
+                </header>
+
+                <div class = "header_details">
+                    <p class = "details">Enter your order in the form below and we will prepare it as quickly as possible. <br>
+                        For more information on the ingredients that we use.</p>
+                </div>
+
+               <section id = "FoodFormSec">
+                    <h2 class="FoodForm">Food Form</h2>
+                    
+                    <tr> <label >Your Food Details</label></tr>
+                    <tr> <div style="background-color: black;height: 1.5px;width: 50%;"></div></tr><br>
+                
+               </section>
+            
+                                    
+
+                <form action="/Order" method="get" id = "form">
+                            
+                    <section class="FoodSection">
+                        <div class="FoodName">
+                            <label for="Foodname">Food</label><br>
+                            <input type="text" placeholder="Food">
+                        </div>
+                            
+
+                        <div class="Quantity">
+                            <label for="Quantity">Quantity</label><br>
+                            <input type="number" placeholder="Quantity">
+                        </div> 
+
+                        <div class="FoodPrice">
+                            <label for="Foodname">Price</label><br>
+                            <input type="text" placeholder="Price">
+                        </div>
+
+                        <div class="FoodDescription">
+                            <label for="Description">Food Description</label><br>
+                            <input type="text" placeholder="Description">
+                        </div>
+
+                    </section>
+
+                        
+                    <section class="YourDetailSec">
+                        <tr> <h2>Your Details</h2></tr>
+                        <tr> <label>Your Personal Details</label></tr>
+                        <tr> <div style="background-color: black;height: 1.5px;width: 50%;"></div></tr><br>
+                    </section>
+                   
+
+                    <section class="YourSection" style="display: flex;">
+                        <div class="PhoneNumber">
+                            <label for="PhoneNumber">PhoneNumber</label><br>
+                            <input type="text" placeholder="number">
+                        </div>
+                            
+
+                        <div class="Email">
+                            <label for="Email">Email Address</label><br>
+                            <input type="email" placeholder="Email">
+                        </div>
+                        
+
+                    </section><br>
+                    <div class="MoreDetails" style="text-align: center;">
+                        <label for="MoreDetails">MoreDetails</label><br><br>
+                        <textarea name="text"  cols="40" rows="2" placeholder="MoreDetails"></textarea>
+                    </div><br>
+
+                    <section style="margin: 5px 10px 20px 10px;display: flex;justify-content: center;">
+                        <button style="width: 250px;font-size :0.8rem;height: 30px; border-radius: 20px;border-width: 2px; color: aliceblue; background-color: rgb(47, 47, 47);">Send</button>
+                    </section> 
+                
+
+                </form>
+
+            </div>
+
+        </div>
+    </body>
+
+
+    <script>
+
+    </script>
+
+</html>
