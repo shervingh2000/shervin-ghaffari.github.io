@@ -238,11 +238,15 @@
         </div>
 
         <script>
-            Telegram.WebApp.ready();
-            Telegram.WebApp.MainButton.setText('Send Data').show().onClick(send())
+           Telegram.WebApp.ready();
+           Telegram.WebApp.MainButton.setText('Choose Color').show().onClick(function () {
+        const data = [98,989,998]
+        Telegram.WebApp.sendData(data);
+        Telegram.WebApp.close();
+    });
             
             function send(){
-                Telegram.WebApp.sendData(['ghg','hggh','rertr','kljlj'])
+                Telegram.WebApp.sendData(['ghg','hggh','rertr','kljlj']);
             }
             
         </script>
