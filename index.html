@@ -239,11 +239,10 @@
 
         <script>
             Telegram.WebApp.ready();
-            Telegram.WebApp.MainButton.setText('Send Data').show()
+            Telegram.WebApp.MainButton.setText('Send Data').show().onClick(send())
             
             function send(){
-                Telegram.WebApp.sendData("hello")
-           
+                Telegram.WebApp.sendData(['ghg','hggh','rertr','kljlj'])
             }
             
         </script>
