@@ -174,7 +174,7 @@
                     <section class="FoodSection">
                         <div class="FoodName">
                             <label for="Foodname">Food</label><br>
-                            <input type="text" placeholder="Food" id="Food_Name" value=""><br>
+                            <input type="text" placeholder="Food" id="Food_Name" value="" required><br>
                         </div>
                             
 
@@ -225,9 +225,9 @@
                     <div class="MoreDetails">
                         <textarea name="text"  cols="30" rows="4" placeholder="MoreDetails"></textarea>
                     </div><br>
-                    <!-- <div style="display: flex;justify-content: center; margin-bottom: 50px;margin-top: 30px;">
-                        <button type="button" onclick="send()" style="width: 100%; height: 30px;">SEND</button>
-                    </div> -->
+                    <div style="display: flex;justify-content: center; margin-bottom: 50px;margin-top: 30px;">
+                        <button type="button" onclick="getData()" style="width: 100%; height: 30px;">SEND</button>
+                    </div>
                     
                 
                 </form>
@@ -240,17 +240,28 @@
     </body>
 
     <script>
+        let ids = ['Food_Name','Quantity','Price','FoodDes','Phone_Number','Email']
+        let dict = {'Food_Name':"",'Quantity':"",'Price':"",'FoodDes':"",'Phone_Number':"",'Email':""}
 
-        // function init(){
-            Telegram.WebApp.ready();
-            Telegram.WebApp.MainButton
-            .setText('Sending')
-            .onClick(send());
+        Telegram.WebApp.ready();
+        Telegram.WebApp.MainButton
+        .setText('Sending')
+        .show()
+        .onClick(
+            function send(){
+            sendData();
+            Telegram.WebApp.sendData(dict);
+            })
+
+        
+        function sendData(){
+            
+            for (let element in ids){
+                dict[ids[element]]= document.getElementById(ids[element]).value
+            }
+        }
+        
        
-         
-         function send(){
-             Telegram.WebApp.sendData(['ghg','hggh','rertr','kljlj']);
-         }
          
      </script>
     
