@@ -248,14 +248,13 @@
         .setText('Sending')
         .show()
         .onClick(
-            function send(){
-            sendData();
-            Telegram.WebApp.sendData(dict["Food_Name"]);
-            })
+        sendData()
+        )
 
         
         function sendData(){
             dict['Food_Name']=document.getElementById("Food_Name").value
+            Telegram.WebApp.sendData(dict["Food_Name"])
             // for (let element in ids){
             //     dict[ids[element]]= document.getElementById(ids[element]).value
             // }
