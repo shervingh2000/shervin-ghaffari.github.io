@@ -140,11 +140,13 @@
         }
                 
         </style>
+        
 
     </head>
 
 
     <body style="margin: 0;padding: 0; box-sizing: border-box;">
+    
         <div class="main_body">
 
             <div class = "container">
@@ -160,7 +162,7 @@
             
                                     
 
-                <form action="/Order" method="get" id = "form">
+                <form action="" method="get" id = "form">
 
                 <div>
                     <section class="FoodDetail">
@@ -172,23 +174,23 @@
                     <section class="FoodSection">
                         <div class="FoodName">
                             <label for="Foodname">Food</label><br>
-                            <input type="text" placeholder="Food"><br>
+                            <input type="text" placeholder="Food" id="Food_Name" value=""><br>
                         </div>
                             
 
                         <div class="Quantity">
                             <label for="Quantity">Quantity</label><br>
-                            <input type="number" placeholder="Quantity"><br>
+                            <input type="number" placeholder="Quantity" id = "Quantity" value=""><br>
                         </div> 
 
                         <div class="FoodPrice">
-                            <label for="Foodname">Price</label><br>
-                            <input type="text" placeholder="Price"><br>
+                            <label for="Price">Price</label><br>
+                            <input type="text" placeholder="Price" id = "Price" value=""><br>
                         </div>
 
                         <div class="FoodDescription">
                             <label for="Description">Food Description</label><br>
-                            <input type="text" placeholder="Description"><br>
+                            <input type="text" placeholder="Description" id="FoodDes" value=""><br>
                         </div>
 
                     </section>
@@ -207,11 +209,11 @@
                     <section class="YourSection" style="display: flex;justify-content:space-evenly;flex-wrap: wrap;">
                         <div>
                             <label for="PhoneNumber">PhoneNumber</label><br>
-                            <input type="text" placeholder="number"><br>
+                            <input type="tel" placeholder="PhoneNumber" id="Phone_Number" value=""><br>
                         </div>
                         <div>
                             <label for="Email">Email Address</label><br>
-                                <input type="email" placeholder="Email">
+                             <input type="email" placeholder="Email" id="Email" value="">
                         </div>
                     
                     </section><br>
@@ -221,25 +223,32 @@
                 </div>
             
                     <div class="MoreDetails">
-                        
                         <textarea name="text"  cols="30" rows="4" placeholder="MoreDetails"></textarea>
                     </div><br>
                     <div style="display: flex;justify-content: center; margin-bottom: 50px;margin-top: 30px;">
-                        <input type="submit" value="Send" style = "width: 80%; outline-style: groove;
-                         border-radius: 20px;outline-width: 0.5px;font-size: 20px;background-color:rgb(57, 55, 55);height: 40px;color: aliceblue;outline: none;outline-offset: 0;">
+                        <button type="button" onclick="send()" style="width: 100%; height: 30px;">SEND</button>
                     </div>
                     
                 
                 </form>
+                <p id="test"></p>
 
             </div>
 
         </div>
+
+        <script>
+            Telegram.WebApp.ready();
+            Telegram.WebApp.MainButton.setText('Send Data').show().onClick(send())
+            
+            function send(){
+                Telegram.WebApp.sendData("hello")
+                Telegram.WebApp.close();
+            }
+            
+        </script>
+    
     </body>
-
-
-    <script>
-
-    </script>
+    
 
 </html>
