@@ -14,97 +14,129 @@
             .main_body{
                 position: relative;
                 display: flex;
-                flex-wrap: wrap;
+                justify-content: center;
                 background-color: rgb(232, 192, 134);
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 
                 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
-            .header{
+            
+            .container{
+                width: 80%;
                 display: flex;
+                flex-direction: column;
                 align-items: center;
+        
             }
             ::placeholder{
-                color: aliceblue;
+                color: rgb(42, 50, 57);
             }
             input{
-                border-radius: 10px;
-                margin: 5px 0px;
-                padding: 2px;
-                text-align: center;
+                border-radius: 5px;
+                outline-style:solid;
+                outline-width: 0.7px;
+                padding-left: 7px;
+                background-color:darksalmon;
+                width: 100%;
                 height: 30px;
-                background-color: rgb(16, 97, 81);
-                color: aliceblue;
+                color: rgb(42, 50, 57);
+
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 
                 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             
-            }
-            .header h1{
-                margin-right: 30px;
             }
             .FoodSection{
+                background-color: aquas;
                 display: flex;
+                justify-content:space-between;
                 flex-wrap: wrap;
             }
-            
-            .header img{
-                margin-right: 30px;
+            .FoodSection div{
+                margin-left: 5px;
             }
-            #form .FoodSection{
-                text-align: left;
-            }
-            textarea{
-                border-radius: 7px;
-                background-color:  rgb(16, 97, 81);
-                color:aliceblue;
-                text-align: center;
-                padding: 7px;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 
-                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-            
-            @media screen and (max-width: 754px ){
-                .main_body{
-                    margin: 0px 0px;
-                }
-                .header{
+            .header{
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-left: 20px;
-                color: rgb(2, 85, 57);
-                
-            }
-            .FoodForm {
-                    text-align: center;
-                }
-            #FoodFormSec{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .header_details{
-                margin: 0px 5%;
-                display: flex;
-                /* text-align: center; */
-                padding: 0px 10px;
-                font-family: sans-serif;
-                color: rgb(8, 67, 78);
+                flex-wrap: wrap;
                 justify-content: center;
+                align-items: center;
             }
-            .FoodSection{
+            
+            .FoodDetail{
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-            }
-            .YourSection{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
+                flex-direction: column;
+                align-items: center;
             }
             .YourDetailSec{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+            }
+            .header h1{
+                margin-right: 30px;
+            }
+            form{
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            label{
+                margin-bottom: 10px;
+            }
+
+            .header img{
+                margin-right: 30px;
+            }
+        
+           div textarea{
+                border-radius: 7px;
+                width: 100%;
+                background-color: darksalmon;
+                padding: 7px;
+                outline-style: groove;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .MoreDetails{
+                display: flex;
+                justify-content: center;
+            }
+            
+
+            
+            @media screen and (max-width: 754px ){
+
+            textarea{
+                width: 100%;
+                padding-left: 7px;
+                border-radius: 3px;
+            }
+    
+            div input{
+                width: 100%;
+                border-radius: 5px;
+            }
+            #FoodFormSec{
+                display: flex;
+                flex-direction: column;
+            }
+            .header_details{
+                display: flex;
+                font-family: sans-serif;
+                color: rgb(8, 67, 78);
+                justify-content: center;
+            }
+            
+            .FoodSection div{
+                width: 100%;
+            }
+            .YourSection div{
+            
+                width: 100%;
+            }
+            
+            .YourDetailSec{
+                display: flex;
+                flex-direction: column;
             }
     
         }
@@ -119,83 +151,87 @@
 
             <div class = "container">
                 <header class="header">
-                    <h1>Food Order Form</h1>
+                    <h1>Sell Your Food</h1>
                     <img class = "header_img" src="https://s3-us-west-2.amazonaws.com/userdata123/www/htmlblocks-images/28/28433/28433_4623678_630e0c5dd8f87.png" alt="Food Order Form">
                 </header>
 
-                <div class = "header_details">
+                <div class = "header_details" style="width: 85%;">
                     <p class = "details">Enter your order in the form below and we will prepare it as quickly as possible.
                         For more information on the ingredients that we use.</p>
                 </div>
-
-               <section id = "FoodFormSec">
-                    <h2 class="FoodForm">Food Form</h2>
-                    
-                    <tr> <label >Your Food Details</label></tr>
-                    <tr> <div style="background-color: black;height: 1.5px;width: 50%;"></div></tr><br>
-                
-               </section>
             
                                     
 
                 <form action="/Order" method="get" id = "form">
+
+                <div>
+                    <section class="FoodDetail">
+                        <tr> <h2>Food Form</h2></tr>
+                        <tr> <label>Food Form Details</label></tr>
+                        <tr> <div style="background-color: black;height: 1.5px;width: 100%;"></div></tr><br>
+                    </section>
                             
                     <section class="FoodSection">
                         <div class="FoodName">
                             <label for="Foodname">Food</label><br>
-                            <input type="text" placeholder="Food">
+                            <input type="text" placeholder="Food"><br>
                         </div>
                             
 
                         <div class="Quantity">
                             <label for="Quantity">Quantity</label><br>
-                            <input type="number" placeholder="Quantity">
+                            <input type="number" placeholder="Quantity"><br>
                         </div> 
 
                         <div class="FoodPrice">
                             <label for="Foodname">Price</label><br>
-                            <input type="text" placeholder="Price">
+                            <input type="text" placeholder="Price"><br>
                         </div>
 
                         <div class="FoodDescription">
                             <label for="Description">Food Description</label><br>
-                            <input type="text" placeholder="Description">
+                            <input type="text" placeholder="Description"><br>
                         </div>
 
                     </section>
+                </div>
 
-                        
+                <div>
+
+                
                     <section class="YourDetailSec">
                         <tr> <h2>Your Details</h2></tr>
                         <tr> <label>Your Personal Details</label></tr>
-                        <tr> <div style="background-color: black;height: 1.5px;width: 50%;"></div></tr><br>
+                        <tr> <div style="background-color: black;height: 1.5px;width: 100%;"></div></tr><br>
                     </section>
                    
 
-                    <section class="YourSection" style="display: flex;">
-                        <div class="PhoneNumber">
+                    <section class="YourSection" style="display: flex;justify-content:space-evenly;flex-wrap: wrap;">
+                        <div>
                             <label for="PhoneNumber">PhoneNumber</label><br>
-                            <input type="text" placeholder="number">
+                            <input type="text" placeholder="number"><br>
                         </div>
-                            
-
-                        <div class="Email">
+                        <div>
                             <label for="Email">Email Address</label><br>
-                            <input type="email" placeholder="Email">
+                                <input type="email" placeholder="Email">
                         </div>
-                        
-
+                    
                     </section><br>
-                    <div class="MoreDetails" style="text-align: center;">
-                        <label for="MoreDetails">MoreDetails</label><br><br>
-                        <textarea name="text"  cols="40" rows="2" placeholder="MoreDetails"></textarea>
+                </div>
+                <div style="display: flex;justify-content: center;">
+                    <label for="MoreDetails" style="font-size: 20px;">MoreDetails</label>
+                </div>
+            
+                    <div class="MoreDetails">
+                        
+                        <textarea name="text"  cols="30" rows="4" placeholder="MoreDetails"></textarea>
                     </div><br>
-
-                    <section style="margin: 5px 10px 20px 10px;display: flex;justify-content: center;">
-                        <button style="width: 90%;font-size :0.8rem;height: 30px; border-radius: 20px;border-width: 2px; color: aliceblue; background-color: rgb(56, 145, 156);">Send</button>
-                    </section> 
+                    <div style="display: flex;justify-content: center; margin-bottom: 50px;margin-top: 30px;">
+                        <input type="submit" value="Send" style = "width: 100%; outline-style: groove;
+                         border-radius: 20px;outline-width: 0.5px;font-size: 20px;background-color: darksalmon;">
+                    </div>
+                    
                 
-
                 </form>
 
             </div>
