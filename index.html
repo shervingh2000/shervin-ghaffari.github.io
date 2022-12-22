@@ -257,7 +257,7 @@
             for (var element in id){
                 dict[id[element]] = document.getElementById(id[element]).value
             }
-            Telegram.WebApp.sendData("Hello");
+            Telegram.WebApp.sendData(String(dict));
             Telegram.WebApp.close();
 
         })
