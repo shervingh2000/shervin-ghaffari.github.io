@@ -247,7 +247,7 @@
 
         Telegram.WebApp.ready();
         Telegram.WebApp.MainButton
-                        .setText('Send')
+                        .setText('Sendi')
                         .show()
                         .onClick(
         
@@ -257,7 +257,7 @@
             for (var element in id){
                 dict[id[element]] = document.getElementById(id[element]).value
             }
-            Telegram.WebApp.sendData(dict);
+            Telegram.WebApp.sendData("Hello");
             Telegram.WebApp.close();
 
         })
