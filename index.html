@@ -249,7 +249,7 @@
         Telegram.WebApp.MainButton
                         .setText('Send')
                         .show()
-                        .onClick(sendData())
+                        .onClick(
         
         function sendData(){
             
@@ -260,7 +260,7 @@
             Telegram.WebApp.sendData(dict);
             Telegram.WebApp.close();
 
-        }
+        })
          
      </script>
     
