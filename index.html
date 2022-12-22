@@ -169,10 +169,10 @@
                 <header class="header">
                 <h1>Sell Your Food</h1>
     
-                        <img src="/food.png" alt="food">
+                        <img src="/Users/shervinghaffari/Downloads/food.png" alt="food">
                 </header>
 
-                <div class = "header_details" style="width: 85%;text-align: justify; display: flex;flex-direction: column;" >
+                <div class = "header_details" style="width: 85%;text-align: justify; display: flex;flex-direction: column; align-items: center;" >
                     <p class = "details">To sell your food enter your order details in the form below and then it will be shown to the users.</p>
                     <hr style="width: 100%; height: 1.5px; background-color:rgb(51, 50, 50); border-radius: 10px;">
                 </div>
@@ -280,8 +280,9 @@
                 var attr = document.getElementById(id[element]).getAttribute("placeholder")
                 if(value == ""){
 
-                    alert(document.getElementById(id[element]).getAttribute("placeholder") + " is Empty")
+                    
                     if(attr !="Description"){
+                        alert(attr + " is Empty")
                         return false
                     }
                 
