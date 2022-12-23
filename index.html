@@ -1,298 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
+    <header>
+        <title> SignUp </title>
+        <meta charset="utg-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title>SellerPage</title>
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    </header>
 
-        <style>
-            .main_body{
-                position: relative;
-                display: flex;
-                justify-content: center;
-                background-color: rgb(217, 197, 156);
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 
-                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-            
-            .container{
-                width: 80%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-        
-            }
-            ::placeholder{
-                color: rgb(195, 213, 229);
-            }
-            img{
-                width: 300px;
-                height: auto;
-                margin-top: -20px;
-            }
+    <style>
 
-            *:focus{
-                outline: none;
-                background-color: rgb(46, 46, 46)
-            }
-
-            input{
-                border-radius: 7px;
-                padding-left: 10px;
-                background-color:rgb(78, 78, 78);
-                width: 100%;
-                height: 27px;
-                color: rgb(234, 234, 234);
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 
-                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            
-            }
-            .FoodSection{
-                background-color: aquas;
-                display: flex;
-                justify-content:space-between;
-                flex-wrap: wrap;
-            }
-            .FoodSection div{
-                margin-left: 5px;
-            }
-            .header{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-            }
-            
-            .FoodDetail{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .YourDetailSec{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            form{
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-            }
-            
-            label{
-                margin-bottom: 10px;
-            }
-
-            .header img{
-                margin-right: 30px;
-            }
-            section div{
-                display: flex;
-                flex-wrap: wrap;
-            }
-        
-            div textarea{
-                border-radius: 7px;
-                padding-left:10px ;
-                width: 100%;
-                background-color: rgb(78, 78, 78);
-                color: rgb(234, 234, 234);
-                padding: 7px;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 
-                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            }
-            .MoreDetails{
-                display: flex;
-                justify-content: center;
-            }
-            .star{
-                color: red;
-            }
-            
-
-            
-            @media screen and (max-width: 754px ){
-
-            textarea{
-                width: 100%;
-                padding-left: 7px;
-                border-radius: 3px;
-            }
-    
-            div input{
-                width: 100%;
-                border-radius: 5px;
-            }
-            #FoodFormSec{
-                display: flex;
-                flex-direction: column;
-            }
-            .header_details{
-                display: flex;
-                font-family: sans-serif;
-                color: rgb(8, 67, 78);
-                justify-content: center;
-            }
-            
-            .FoodSection div{
-                width: 100%;
-            }
-            .YourSection div{
-            
-                width: 100%;
-            }
-            
-            .YourDetailSec{
-                display: flex;
-                flex-direction: column;
-            }
-    
+        body{
+            background:linear-gradient(120deg,#2980b9,#8e44ad);
+            height: 130vh;
+            font-family: sans-serif;
         }
-                
-        </style>
+
+        .container{
+            position: absolute;  
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 350px;
+            background:linear-gradient(70deg,#ffccaf,#c7a4f8);
+            border-radius: 18px;
+        }
+        form{
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            text-align: center;
+            font-size: 30px;
+            margin: 30px 0px;
+            color: rgb(18, 85, 114);
+        }
+        form div{
+            width: 90%;
+            position: relative;
+            height: auto;
+            margin: 40px 0px;
+            border-bottom: 2px solid silver;
+        }
+        form div label{
+            position: absolute;
+            font-size: 16px;
+            color: rgb(97, 97, 97);
+            padding: 5px 5px;
+            top: -50%;
+            transform: translateY(-100%);
+            transition: 0.5s;
+            pointer-events: none;
+        }
+        form div input{
+            position: absolute;
+            padding: 0px 5px;
+            font-size: 20px;
+            top: -50%;
+            transform: translateY(-80%);
+            background-color: transparent;
+            color: rgb(16, 67, 85);
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+        }
+        form div input:focus ~ label,form div input:valid ~ label{
+            color: rgb(10, 55, 55);
+            top: -24px;
+        } 
+        form section{
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 10px;
+        } 
+        form section .submit{
+            width: 100%;
+            height: 35px;
+            border-radius: 50px;
+            background-color: #0f6197;
+            color: aliceblue;
+            font-weight: 600;
+            font-size: 19px;
+            cursor: pointer;
+        } 
+        form section .submit:hover{
+            background-color: #0a446a;
+            color: bisque;
+        } 
+
+
+    </style>
+
+    <body style="margin: 0px; padding: 0px; box-sizing: border-box;">
         
-
-    </head>
-
-
-    <body style="margin: 0;padding: 0; box-sizing: border-box;">
-    
-        <div class="main_body">
-
-            <div class = "container">
-                <header class="header">
-                <h1>Sell Your Food</h1>
-    
-                        <img src="/food.png" alt="food">
-                </header>
-
-                <div class = "header_details" style="width: 85%;text-align: justify; display: flex;flex-direction: column; align-items: center;" >
-                    <p class = "details">To sell your food enter your order details in the form below and then it will be shown to the users.</p>
-                    <hr style="width: 100%; height: 1.5px; background-color:rgb(51, 50, 50); border-radius: 10px;">
-                </div>
-                
+        <section class="container">
+            <h1>SignUp</h1>
+            <form  method="get" class="Form">
             
-                                    
-
-                <form action="" method="get" id = "form">
-
-                <div>
-                    <section class="FoodDetail">
-                        <tr> <h2>Food Form</h2></tr>
-                        <tr> <label>Food Form Details</label></tr>
-                        <tr> <div style="background-color: black;height: 1.5px;width: 100%;"></div></tr><br>
-                    </section>
-                            
-                    <section class="FoodSection">
-                        <div class="FoodName">
-                            <label for="Foodname">Food <span class="star">&#x2605</span></label><br>
-                            <input type="text" placeholder="Food" id="Food_Name" value=""><br>
-                        </div>
-                            
-
-                        <div class="Quantity">
-                            <label for="Quantity">Quantity <span class="star">&#x2605</span> </label><br>
-                            <input type="number" placeholder="Quantity" id = "Quantity" value=""><br>
-                        </div> 
-
-                        <div class="FoodPrice">
-                            <label for="Price">Price <span class="star">&#x2605</span></label><br>
-                            <input type="text" placeholder="Price" id = "Price" value=""><br>
-                        </div>
-
-                        <div class="FoodDescription">
-                            <label for="Description">Food Description</label><br>
-                            <input type="text" placeholder="Description" id="FoodDes" value=""><br>
-                        </div>
-
-                    </section>
-                </div>
-
-                <div>
-
                 
-                    <section class="YourDetailSec">
-                        <tr> <h2>Your Details</h2></tr>
-                        <tr> <label>Your Personal Details</label></tr>
-                        <tr> <div style="background-color: black;height: 1.5px;width: 100%;"></div></tr><br>
-                    </section>
-                   
-
-                    <section class="YourSection" style="display: flex;justify-content:space-evenly;flex-wrap: wrap;">
-                        <div >
-                            <label for="PhoneNumber">PhoneNumber <span class="star">&#x2605</span></label><br>
-                            <input type="tel" placeholder="PhoneNumber" id="Phone_Number" value=""><br>
-                        </div>
-                        <div>
-                            <label for="Email">Email Address <span class="star">&#x2605</span></label><br>
-                            <input type="email" placeholder="Email" id="Email" value="">
-                        </div>
+                <div>
                     
-                    </section><br>
+                    <input type="text" id="username" required>
+                    <label class="username">Username</label>
+                    <span style="width: 100%;height: 2px;background-color: rgb(2, 94, 155); z-index: 1;position: absolute;"></span>
+                    
                 </div>
-                <div style="display: flex;justify-content: center;">
-                    <label for="MoreDetails" style="font-size: 16px;">MoreDetails</label>
+                <div>
+                    <input type="password" id="password" required>
+                    <label class="password">Password</label>
+                    <span style="width: 100%;height: 2px;background-color: rgb(2, 94, 155); z-index: 1;position: absolute;"></span>
                 </div>
-            
-                    <!-- <div class="MoreDetails">
-                        <textarea name="text"  cols="30" rows="4" placeholder="MoreDetails"></textarea>
-                    </div><br> -->
-            
+                <div>
+                    
+                    <input type="email" id="email" required>
+                    <label class="email">Email Address</label>
+                    <span style="width: 100%;height: 2px;background-color: rgb(2, 94, 155); z-index: 1;position: absolute;"></span>
+                    
+                </div>
+                <div>
+                    <input type="text" id="studentNumber" required>
+                    <label class="StudentNumber">Student Number</label>
+                    <span style="width: 100%;height: 2px;background-color: rgb(2, 94, 155); z-index: 1;position: absolute;"></span>
+                </div>
 
-                </form>
+                <div>
+                    <input type="tel" id="phoneNumber" required>
+                    <label class="Phone">Phone Number</label>
+                    <span style="width: 100%;height: 2px;background-color: rgb(2, 94, 155); z-index: 1;position: absolute;"></span>
+                </div>
 
-            </div>
+                <section class="button">
+                    <input type="submit" class="submit" value="SignUp" onclick="send_data()">
+                </section>    
 
-        </div>
-    
-    </body>
+            </form>
 
-    <script>
-        let id = ['Food_Name','Quantity','Price','FoodDes','Phone_Number','Email']
-        let dict = {}
 
-        Telegram.WebApp.ready();
-        Telegram.WebApp.MainButton
-                        .setText('Send')
-                        .show()
-                        .onClick(
-        
-        function sendData(){
-        if(validate_data()){
-                for (var element in id){
-                dict[id[element]] = document.getElementById(id[element]).value
-            }
-            Telegram.WebApp.sendData(JSON.stringify(dict));
+        </section>
+
+        <script>
+            Telegram.WebApp.ready();
+            keys = ['username','password','email','studentNumber','phoneNumber']
+            values = {'username':'','password':'','email':'','studentNumber':'','phoneNumber':'','method':'signup'}
+            function send_data(){
+                keys.forEach(element => {
+                    values[element] = document.getElementById(element).value;
+                });
+            Telegram.WebApp.sendData(JSON.stringify(values));
             Telegram.WebApp.close();
-        }
-    }
-    )
-    function validate_data(){
-            
-            for (var element in id){
-                var value = document.getElementById(id[element]).value
-                var attr = document.getElementById(id[element]).getAttribute("placeholder")
-                if(value == ""){
-
-                    
-                    if(attr !="Description"){
-                        alert(attr + " is Empty")
-                        return false
-                    }
-                
-                }
             }
-           
-            return true
-        }
-         
-     </script>
-    
+        </script>
+
+    </body>
 
 </html>
